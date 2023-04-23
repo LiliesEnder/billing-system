@@ -1,0 +1,29 @@
+{
+	"info": {
+		"_postman_id": "bcd44c12-118b-4706-9154-55b911a03be1",
+		"name": "Utils",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27051759",
+		"_collection_link": "https://warped-moon-501759.postman.co/workspace/BillingTesting~e09b081d-ec6d-4c01-96fb-2fe1c0550cff/collection/27051759-bcd44c12-118b-4706-9154-55b911a03be1?action=share&creator=27051759&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Actuators",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/actuator/mappings",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"actuator",
+						"mappings"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

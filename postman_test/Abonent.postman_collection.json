@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "fc4cac06-44af-4bef-8aa0-b495b8eb6968",
+		"name": "Abonent",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27051759",
+		"_collection_link": "https://warped-moon-501759.postman.co/workspace/BillingTesting~e09b081d-ec6d-4c01-96fb-2fe1c0550cff/collection/27051759-fc4cac06-44af-4bef-8aa0-b495b8eb6968?action=share&creator=27051759&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\": \"+79001002030\",\r\n    \"money\": 10.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/pay",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"pay"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Tarrif",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userPhone\": \"79001002030\",\r\n    \"newTarrifId\": \"11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/change-tariff",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"change-tariff"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
