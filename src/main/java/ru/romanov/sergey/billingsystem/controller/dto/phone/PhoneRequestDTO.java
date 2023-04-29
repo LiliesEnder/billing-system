@@ -1,11 +1,11 @@
-package ru.romanov.sergey.billingsystem.controller.dto.changetariff;
+package ru.romanov.sergey.billingsystem.controller.dto.phone;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class ChangeTariffRequestDTO {
+public class PhoneRequestDTO {
     private String numberPhone;
     private String tariffId;
 }
