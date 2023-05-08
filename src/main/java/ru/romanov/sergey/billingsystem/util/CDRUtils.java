@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class CDRUtils {
-    private static final String CDR_FILE_NAME = "cdr.txt";
+    private static final String CDR_FILE_NAME = "cdr.csv";
     public static final String CDR_FILE_PATH = "./src/main/resources/static/" + CDR_FILE_NAME;
     public static final String SDF_PATTERN = "yyyyMMddHHmmss";
     private static final int NUMBER_OF_LINES = 10000;
@@ -26,6 +26,7 @@ public class CDRUtils {
         final long DISTRIBUTION_INSIDE_MONTH = endDate.getTimeInMillis() - startDate.getTimeInMillis();
 
         try(FileWriter writer = new FileWriter(CDR_FILE_PATH, false)) {
+            writer.write("callType,numberPhone,start,end\n");
             for (int i = 0; i < NUMBER_OF_LINES; i++) {
                 String callType = CALL_TYPES[random.nextInt(2)];
                 String number = numbers.get(random.nextInt(numbers.size()));

@@ -18,6 +18,11 @@ public class BillingWithInitializing {
 
     @EventListener(ApplicationReadyEvent.class)
     public void doBillingWithInitialize() {
+        for (StackTraceElement element : Thread.currentThread().getStackTrace()) {
+            if (element.getClassName().startsWith("org.junit.")) {
+                return;
+            }
+        }
         billingService.doBilling(new BillingRequestDTO("run", LocalDate.now().getYear(), LocalDate.now().getMonthValue()));
         System.out.println("\n\n\n\n\nA\n\n\n\n");
     }

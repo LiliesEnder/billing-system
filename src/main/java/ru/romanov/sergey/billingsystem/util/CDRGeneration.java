@@ -23,7 +23,8 @@ public class CDRGeneration {
         endDate.add(Calendar.MONTH, MONTH_PERIOD_NUMBER);
         final long DISTRIBUTION_INSIDE_MONTH = endDate.getTimeInMillis() - startDate.getTimeInMillis();
 
-        try(FileWriter writer = new FileWriter("cdr.txt", false)) {
+        try(FileWriter writer = new FileWriter("cdr.csv", false)) {
+            writer.write("callType,numberPhone,start,end\n");
             for (int i = 0; i < NUMBER_OF_LINES; i++) {
                 String callType = CALL_TYPES[random.nextInt(2)];
                 String number = numbers.get(random.nextInt(numbers.size()));
